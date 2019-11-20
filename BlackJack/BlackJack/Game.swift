@@ -26,7 +26,10 @@ class Game {
     
     func newGame() {
         player.score = 0
+      //ace value should be to differ between 1 or 11
         deck = Card.newDeck(aceValue: 1)
+      //creating an empty array here will start a new hand for you player
+      //player.cardsArray = []
     }
     
     func stopHits(hitPlayers: Bool) -> Int {
@@ -66,13 +69,20 @@ class Game {
         switch player.score {
         case (21):
             print("🃏BlackJack🃏")
+          //calling new game here will create new game after blackjack
+            //game.newGame()
+          
         case (22...30):
             print("Bust⚰️💀")
+            //calling new game here will create new game after bust
+            //game.newGame()
         default:
             print("Continue😉🧐")
-             game.hitMe()
+             //game.hitMe()
+            //no need to call this function here
+          //If you do it will always execute
         }
-      
+
     }
     
 }
